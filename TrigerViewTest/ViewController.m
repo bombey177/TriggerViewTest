@@ -11,6 +11,7 @@
 #import "TableViewBottomCell.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *firstTable;
 
 @end
@@ -30,7 +31,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 4;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -38,8 +39,8 @@
 }// Default is 1 if not implemented
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row % 2 == 0){
-        if (indexPath.section % 2 == 0){
+    if (indexPath.section % 2 == 0){//first section
+        if (indexPath.row % 2 == 0){
             //top cell
             NSString *CellIdentifier = @"TopCell";
             TableViewTopCell *topCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -54,8 +55,8 @@
             return bottomCell;
         }
     }
-    else{
-        if (indexPath.section % 2 == 0){
+    else{//second section
+        if (indexPath.row % 2 == 0){
             //top cell
             NSString *CellIdentifier = @"TopCell";
             TableViewTopCell *topCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -73,9 +74,13 @@
 }
 
 
-/*
+
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    
+    if (section == 0){
+        return [NSString stringWithFormat:@"Purchase"];
+    }
+    else
+        return [NSString stringWithFormat:@"Sale"];
 }// fixed font style. use custom view (UILabel) if you want something different
-*/
+
 @end
