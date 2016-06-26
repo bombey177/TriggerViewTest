@@ -19,14 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQQ-v0-vg1">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="88" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5TI-qZ-E8b" userLabel="Table View 1">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="F0j-NP-lFf">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="256"/>
-                                    </constraint>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TopCell" rowHeight="44" id="qv3-AT-lCy" userLabel="selectTopCell" customClass="TableViewTopCell">
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,12 +149,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
-                                            <outlet property="aboveBelowLabel" destination="3P9-D7-cjU" id="Gct-OD-wfb"/>
-                                            <outlet property="biggerLowerLabel" destination="3P9-D7-cjU" id="4c9-jX-ZNv"/>
-                                            <outlet property="middleSeparatorHeight" destination="xrh-Bi-DoH" id="Py8-MA-pjR"/>
-                                            <outlet property="middleSeparatorOutlet" destination="eVI-11-73M" id="Fg7-pK-KMP"/>
-                                            <outlet property="topSeparator" destination="aXB-xW-QIg" id="K6V-aR-RIp"/>
-                                            <outlet property="topSeparatorHeihgt" destination="del-24-zJ7" id="JO0-wX-aNq"/>
+                                            <outlet property="aboveBelowLabel" destination="3P9-D7-cjU" id="iwH-B4-6Uz"/>
                                             <outlet property="triggerSubSwitch" destination="Qxn-Yf-alC" id="hmP-es-5w1"/>
                                         </connections>
                                     </tableViewCell>
@@ -230,66 +226,49 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
-                                            <outlet property="lastSeparatorOutlet" destination="g5J-f2-pAz" id="nlp-9e-QSB"/>
                                             <outlet property="triggerPriceLabel" destination="Lql-m7-Rsy" id="kaK-j0-b2v"/>
                                             <segue destination="FmM-hq-0EW" kind="show" id="QdW-On-9c0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="F0j-NP-lFf"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="F0j-NP-lFf"/>
-                                    </mask>
-                                </variation>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQQ-v0-vg1">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5TI-qZ-E8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ORu-HB-hcO"/>
-                            <constraint firstAttribute="trailing" secondItem="5TI-qZ-E8b" secondAttribute="trailing" id="QHQ-6Z-lVZ"/>
-                            <constraint firstItem="5TI-qZ-E8b" firstAttribute="top" secondItem="TQQ-v0-vg1" secondAttribute="bottom" constant="8" id="Xug-fp-PRO"/>
-                            <constraint firstItem="TQQ-v0-vg1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YsM-5H-JMI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5TI-qZ-E8b" secondAttribute="bottom" constant="443" id="sI4-mu-BSy"/>
-                            <constraint firstItem="TQQ-v0-vg1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uLN-RG-MTY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5TI-qZ-E8b" secondAttribute="bottom" id="2Do-Xb-yYt"/>
+                            <constraint firstItem="TQQ-v0-vg1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KUs-Ng-vOC"/>
+                            <constraint firstAttribute="trailing" secondItem="5TI-qZ-E8b" secondAttribute="trailing" id="LCw-f7-IBq"/>
+                            <constraint firstItem="5TI-qZ-E8b" firstAttribute="top" secondItem="TQQ-v0-vg1" secondAttribute="bottom" constant="8" id="WVX-8Q-kkX"/>
+                            <constraint firstItem="TQQ-v0-vg1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gfE-ea-v8w"/>
+                            <constraint firstItem="5TI-qZ-E8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tap-ch-TmI"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="5TI-qZ-E8b"/>
                                 <exclude reference="TQQ-v0-vg1"/>
+                                <exclude reference="5TI-qZ-E8b"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ORu-HB-hcO"/>
-                                <exclude reference="QHQ-6Z-lVZ"/>
-                                <exclude reference="Xug-fp-PRO"/>
-                                <exclude reference="YsM-5H-JMI"/>
-                                <exclude reference="uLN-RG-MTY"/>
-                                <exclude reference="sI4-mu-BSy"/>
+                                <exclude reference="LCw-f7-IBq"/>
+                                <exclude reference="WVX-8Q-kkX"/>
+                                <exclude reference="tap-ch-TmI"/>
+                                <exclude reference="KUs-Ng-vOC"/>
+                                <exclude reference="gfE-ea-v8w"/>
+                                <exclude reference="2Do-Xb-yYt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="5TI-qZ-E8b"/>
                                 <include reference="TQQ-v0-vg1"/>
+                                <include reference="5TI-qZ-E8b"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ORu-HB-hcO"/>
-                                <include reference="QHQ-6Z-lVZ"/>
-                                <include reference="Xug-fp-PRO"/>
-                                <include reference="YsM-5H-JMI"/>
-                                <include reference="uLN-RG-MTY"/>
-                                <include reference="sI4-mu-BSy"/>
+                                <include reference="LCw-f7-IBq"/>
+                                <include reference="WVX-8Q-kkX"/>
+                                <include reference="tap-ch-TmI"/>
+                                <include reference="KUs-Ng-vOC"/>
+                                <include reference="gfE-ea-v8w"/>
+                                <include reference="2Do-Xb-yYt"/>
                             </mask>
                         </variation>
                     </view>

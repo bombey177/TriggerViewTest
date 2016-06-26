@@ -44,30 +44,43 @@
             //top cell
             NSString *CellIdentifier = @"TopCell";
             TableViewTopCell *topCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            [topCell configMaxCellForSection:indexPath];
+            if (indexPath.row == 0)
+                [topCell configMaxCellForSection:indexPath];
+            else
+                [topCell configMinCellForSection:indexPath];
             return topCell;
         }
         else{
             //bottom cell
             NSString *CellIdentifier = @"BottomCell";
             TableViewBottomCell *bottomCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            [bottomCell configMaxCellForSection:indexPath];
+            if (indexPath.row == 1)
+                [bottomCell configMaxCellForSection:indexPath];
+            else
+                [bottomCell configMinCellForSection:indexPath];
             return bottomCell;
         }
     }
+    //тот же код
     else{//second section
         if (indexPath.row % 2 == 0){
             //top cell
             NSString *CellIdentifier = @"TopCell";
             TableViewTopCell *topCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            [topCell configMinCellForSection:indexPath];
+            if (indexPath.row == 0)
+                [topCell configMaxCellForSection:indexPath];
+            else
+                [topCell configMinCellForSection:indexPath];
             return topCell;
         }
         else{
             //bottom cell
             NSString *CellIdentifier = @"BottomCell";
             TableViewBottomCell *bottomCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-            [bottomCell configMinCellForSection:indexPath];
+            if (indexPath.row == 1)
+                [bottomCell configMaxCellForSection:indexPath];
+            else
+                [bottomCell configMinCellForSection:indexPath];
             return bottomCell;
         }
     }
