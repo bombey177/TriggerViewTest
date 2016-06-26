@@ -14,6 +14,8 @@
 		D5DE2B8E1D200B0300AA8CEB /* TrigerViewTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5DE2B8C1D200B0300AA8CEB /* TrigerViewTest.xcdatamodeld */; };
 		D5DE2B901D200B0300AA8CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DE2B8F1D200B0300AA8CEB /* Assets.xcassets */; };
 		D5DE2B931D200B0300AA8CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DE2B911D200B0300AA8CEB /* LaunchScreen.storyboard */; };
+		D5DE2B9C1D20163000AA8CEB /* TableViewTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DE2B9B1D20163000AA8CEB /* TableViewTopCell.m */; };
+		D5DE2B9F1D20165500AA8CEB /* TableViewBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DE2B9E1D20165500AA8CEB /* TableViewBottomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		D5DE2B8F1D200B0300AA8CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5DE2B921D200B0300AA8CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5DE2B941D200B0300AA8CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DE2B9A1D20163000AA8CEB /* TableViewTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTopCell.h; sourceTree = "<group>"; };
+		D5DE2B9B1D20163000AA8CEB /* TableViewTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTopCell.m; sourceTree = "<group>"; };
+		D5DE2B9D1D20165500AA8CEB /* TableViewBottomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewBottomCell.h; sourceTree = "<group>"; };
+		D5DE2B9E1D20165500AA8CEB /* TableViewBottomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewBottomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			children = (
 				D5DE2B831D200B0300AA8CEB /* AppDelegate.h */,
 				D5DE2B841D200B0300AA8CEB /* AppDelegate.m */,
+				D5DE2BA01D20166400AA8CEB /* Cells */,
 				D5DE2B861D200B0300AA8CEB /* ViewController.h */,
 				D5DE2B871D200B0300AA8CEB /* ViewController.m */,
 				D5DE2B891D200B0300AA8CEB /* Main.storyboard */,
@@ -80,6 +87,17 @@
 				D5DE2B811D200B0300AA8CEB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5DE2BA01D20166400AA8CEB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D5DE2B9A1D20163000AA8CEB /* TableViewTopCell.h */,
+				D5DE2B9D1D20165500AA8CEB /* TableViewBottomCell.h */,
+				D5DE2B9E1D20165500AA8CEB /* TableViewBottomCell.m */,
+				D5DE2B9B1D20163000AA8CEB /* TableViewTopCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DE2B9F1D20165500AA8CEB /* TableViewBottomCell.m in Sources */,
 				D5DE2B881D200B0300AA8CEB /* ViewController.m in Sources */,
+				D5DE2B9C1D20163000AA8CEB /* TableViewTopCell.m in Sources */,
 				D5DE2B851D200B0300AA8CEB /* AppDelegate.m in Sources */,
 				D5DE2B821D200B0300AA8CEB /* main.m in Sources */,
 				D5DE2B8E1D200B0300AA8CEB /* TrigerViewTest.xcdatamodeld in Sources */,
